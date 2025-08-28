@@ -1,69 +1,61 @@
-# React + TypeScript + Vite
+# Portfolio - Guilherme Lana
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sobre o Projeto
 
-Currently, two official plugins are available:
+Este é o portfolio pessoal de Guilherme Lana, desenvolvedor e designer digital. Um site moderno e responsivo que apresenta projetos, habilidades e experiências profissionais.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Como executar o projeto
 
-## Expanding the ESLint configuration
+Para rodar este projeto localmente, você precisa ter Node.js & npm instalados - [instale com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Siga estes passos:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```sh
+# Passo 1: Clone o repositório
+git clone <URL_DO_SEU_REPOSITORIO>
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# Passo 2: Navegue até o diretório do projeto
+cd refined-portfolio-layout
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Passo 3: Instale as dependências
+npm install
+
+# Passo 4: Execute o servidor de desenvolvimento
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tecnologias Utilizadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Este projeto foi construído com:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Vite** - Build tool e dev server
+- **TypeScript** - Tipagem estática
+- **React** - Biblioteca para interfaces
+- **shadcn/ui** - Componentes de UI
+- **Tailwind CSS** - Framework de CSS utilitário
+- **Radix UI** - Componentes acessíveis
+
+## Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera a build de produção
+- `npm run preview` - Visualiza a build de produção
+- `npm run lint` - Executa o linter
+
+## Estrutura do Projeto
+
 ```
+src/
+├── components/     # Componentes React
+├── hooks/         # Custom hooks
+├── lib/           # Utilitários
+├── pages/         # Páginas da aplicação
+└── assets/        # Imagens e recursos
+```
+
+## Contato
+
+**Guilherme Lana**
+- Portfolio: [Seu site]
+- LinkedIn: [Seu LinkedIn]
+- Email: [Seu email]

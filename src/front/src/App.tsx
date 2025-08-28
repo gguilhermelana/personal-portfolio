@@ -1,27 +1,27 @@
-import "./App.css";
-import About from "./sections/About/About";
-import Contact from "./sections/Contact/Contact";
-import Experience from "./sections/Experience/Experience";
-import Header from "./sections/Header/Header";
-import Hero from "./sections/Hero/Hero";
-import Projects from "./sections/Projects/Projects";
-import { LanguageProvider } from "./contexts/LanguageContext";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { LanguageProvider } from "@/contexts/LanguageContext";
+import Index from "./pages/Index";
 
-function App() {
-  return (
+const queryClient = new QueryClient();
+
+
+import { EmailModalProvider } from "@/contexts/EmailModalContext";
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
     <LanguageProvider>
-      <div className="App">
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Experience />
-        </main>
-        <Contact />
-      </div>
+      <EmailModalProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <Index />
+        </TooltipProvider>
+      </EmailModalProvider>
     </LanguageProvider>
-  );
-}
+  </QueryClientProvider>
+);
 
 export default App;
